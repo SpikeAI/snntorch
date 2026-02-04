@@ -13,7 +13,7 @@ batch_size = 128
 num_steps = 20
 # data_path='/tmp/data/mnist'
 data_path='C:\\Users\\jeshr\\Data\\mnist'
-device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+device = torch.device("cuda") if torch.cuda.is_available() else torch.device("mps") if torch.backends.mps.is_available() else torch.device("cpu")
 
 
 # Define a transform
